@@ -42,7 +42,7 @@
 			});
 		}
 	};
-	function onSucess(position) {
+	var onSucess = function(position) {
 		// var element=document.getElementById('geoLocation');
 		// element.innerHTML='Latitude '+ position.coords.latitude +'<br />'+
 		// 'Longitude:'+position.coords.longitude +'<br />'+'<hr />'+element.innerHTML;
@@ -54,7 +54,6 @@
 		var element = document.getElementById('displayPositionWatch');
 		element.innerHTML = 'Latitude: ' + position.coords.latitude + '<br />' + 'Longitude: ' + position.coords.longitude + '<br />' + '<hr />' + element.innerHTML;
 	}
-
 	function onError(error) {
 		alert('code ' + error.code + '\n' + 'message: ' + error.message + '\n');
 	}
@@ -103,23 +102,23 @@
 // })();
 
 // (function() {
-	// document.addEventListener('deviceready', onDeviceReady.bind(this), false);
-// 
-	// function onDeviceReady() {
-		// document.getElementById('barcode').onclick = function() {
-			// cordova.plugins.barcodeScanner.scan(function(result) {
-				// alert("We got a barcode\n" + "Result: " + result.text + "\n" + "Format: " + result.format + "\n" + "Cancelled: " + result.cancelled);
-			// }, function(error) {
-				// alert("Scanning failed: " + error);
-			// }, {
-				// "preferFrontCamera" : true, // iOS and Android
-				// "showFlipCameraButton" : true, // iOS and Android
-				// "prompt" : "Place a barcode inside the scan area", // supported on Android only
-				// "formats" : "QR_CODE,PDF_417", // default: all but PDF_417 and RSS_EXPANDED
-				// "orientation" : "landscape" // Android only (portrait|landscape), default unset so it rotates with the device
-			// });
-		// }
-	// };
+// document.addEventListener('deviceready', onDeviceReady.bind(this), false);
+//
+// function onDeviceReady() {
+// document.getElementById('barcode').onclick = function() {
+// cordova.plugins.barcodeScanner.scan(function(result) {
+// alert("We got a barcode\n" + "Result: " + result.text + "\n" + "Format: " + result.format + "\n" + "Cancelled: " + result.cancelled);
+// }, function(error) {
+// alert("Scanning failed: " + error);
+// }, {
+// "preferFrontCamera" : true, // iOS and Android
+// "showFlipCameraButton" : true, // iOS and Android
+// "prompt" : "Place a barcode inside the scan area", // supported on Android only
+// "formats" : "QR_CODE,PDF_417", // default: all but PDF_417 and RSS_EXPANDED
+// "orientation" : "landscape" // Android only (portrait|landscape), default unset so it rotates with the device
+// });
+// }
+// };
 
 }
 )();
