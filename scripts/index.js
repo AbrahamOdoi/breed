@@ -20,7 +20,7 @@
 
 		//ITS ALWAYS ADVISABLE TO INITIATE A navigator.geolocation.watchPostition ON DEVICE LOAD INSTEAD OF BINDING IT TO THE CLICK EVENT OF A BUTTON.
 		//CORRECTION BELOW
-		navigator.geolocation.watchPostition(onSucess, onError, {
+		var watchId = navigator.geolocation.watchPostition(onSucess, onError, {
 			timeout : 30000
 		});
 
