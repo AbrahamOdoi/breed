@@ -14,6 +14,15 @@
 				destinationType : destinationType.DATA_URL
 			});
 		}
+		
+		document.getElementById("geolocationdata").addEventListener("click", function() {
+			navigator.geolocation.getCurrentPosition(onPositionSuccess, onPositionError, {
+				enableHighAccuracy : true
+			});
+		});
+		
+		
+		
 		// document.getElementById("geoLocation").onclick = function() {
 		// navigator.geolocation.watchPostition(onSucess,onError,{ timeout: 30000 });
 		// }
@@ -73,8 +82,23 @@
 		alert('Failed because: ' + message);
 
 	}
+	
+	var onPositionSuccess = function(position) {
+		alert('Latitude: ' + position.coords.latitude + '\n' + 'Longitude: ' + position.coords.longitude + '\n');
+	};
+	
+	function onPositionError(error) {
+		alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+	}
 
 })();
+
+
+
+
+
+
+
 
 //I WOULDN'T ADVICE THE DECLARATION OF DIFFERENT onDeviceReady() FOR EACH FUNCTIONAL CALL. ONE onDeviceReady() CAN HANDLE ALL.
 
